@@ -43,7 +43,9 @@ class MP:
             mixer.init()
             mixer.music.load(str(self.music_file))
             mixer.music.play()
+            self.playing_state = False
             self.play_restart.set('Restart')
+            self.pause_resume.set('Pause')
 
     def pause(self):
         if not self.playing_state:
